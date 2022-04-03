@@ -7,7 +7,7 @@ public class BodyPart : MonoBehaviour
 {
     [SerializeField] private float _maxScale;
 
-
+    private bool _stopScale;
     private float _startScale;
     private Rigidbody2D _rigidbody;
 
@@ -23,9 +23,15 @@ public class BodyPart : MonoBehaviour
         {
             if (transform.localScale.x > _maxScale)
             {
+                _stopScale = true;
+                DOVirtual.DelayedCall(10, () => transform.DOScale(_startScale, 2), false).OnComplete(() => 
+                {
+                    _stopScale = false;
+                });
                 return;
             }
-            transform.DOScale(transform.localScale.x + 0.2f, 1);
+            if(!_stopScale)
+                transform.DOScale(transform.localScale.x + 0.1f, 1);
         }
     }
 
