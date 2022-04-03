@@ -56,18 +56,38 @@ public class WallsSpawner : MonoBehaviour
             _visibleWalls.Add(GetRandomWall());
         }
     }
+    private void SetWallsPosition1()
+    {
+        if (_playerPosition.position.y > _visibleWalls[_shownWallsAmount / 2].TopWallPosition.position.y)
+        {
+            _visibleWalls[_visibleWalls.Count-1].gameObject.SetActive(false);
+            _walls.Add(_visibleWalls[_visibleWalls.Count - 1]);
+            _visibleWalls.Remove(_visibleWalls[_visibleWalls.Count - 1]);
+            _visibleWalls.Insert(0, GetRandomTopWall());
+        }
+    }
 
     private WallView GetRandomWall()
     {
-        WallView wall = _walls[0];
+        WallView wall = _walls[Random.Range(0,_walls.Count)];
         wall.transform.position = _visibleWalls[_visibleWalls.Count - 1].DownWallPosition.position;
+        wall.gameObject.SetActive(true);
+        _walls.Remove(wall);
+        return wall;
+    }
+    private WallView GetRandomTopWall()
+    {
+        WallView wall = _walls[Random.Range(0, _walls.Count)];
+        wall.transform.position = _visibleWalls[0].TopWallPosition.position + wall.TopWallPosition.position;
         wall.gameObject.SetActive(true);
         _walls.Remove(wall);
         return wall;
     }
     void Update()
     {
-        if(_wallsCreated)
-        SetWallsPosition();
+        if (_wallsCreated)
+        {
+            SetWallsPosition();
+        }
     }
 }

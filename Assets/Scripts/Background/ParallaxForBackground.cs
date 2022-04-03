@@ -11,12 +11,20 @@ public class ParallaxForBackground : MonoBehaviour
     void Start()
     {
         startPosX = transform.position.x;
+        cam = Camera.main.gameObject;
     }
 
     void Update()
     {
-        float distX = (cam.transform.position.x * parallaxEffect);
+        if (!cam)
+        {
+            cam = Camera.main.gameObject;
+        }
+        else
+        {
+            float distX = (cam.transform.position.x * parallaxEffect);
 
-        transform.position = new Vector3(startPosX + distX, transform.position.y, transform.position.z);
+            transform.position = new Vector3(startPosX + distX, transform.position.y, transform.position.z);
+        }
     }
 }

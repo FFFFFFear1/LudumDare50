@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        _loader.OnProcessData += LoadLeaderBoard;
+       // _loader.OnProcessData += LoadLeaderBoard;
     }
 
     private void LoadLeaderBoard(PlayersData data)
@@ -55,7 +55,7 @@ public class MainMenu : MonoBehaviour
             if (string.IsNullOrEmpty(PlayerPrefs.GetString("Name")))
             {
                 _menu.SetActive(true);
-                _menu.GetComponent<RectTransform>().DOMoveY(_panelScreenPosition.position.y, 1.5f);
+                //_menu.GetComponent<RectTransform>().DOMoveY(_panelScreenPosition.position.y, 1.5f);
             }
             else
             {
@@ -88,7 +88,7 @@ public class MainMenu : MonoBehaviour
         _namePanel.GetComponent<RectTransform>().DOMoveY(1800, 1.5f).OnComplete(() =>
         {
             _menu.SetActive(true);
-            _menu.GetComponent<RectTransform>().DOMoveY(540, 1.5f);
+           // _menu.GetComponent<RectTransform>().DOMoveY(540, 1.5f);
         });
     }
 
