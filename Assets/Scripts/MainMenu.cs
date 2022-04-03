@@ -32,14 +32,29 @@ public class MainMenu : MonoBehaviour
 
     private void LoadLeaderBoard(PlayersData data)
     {
-        var cortedArr = data.PlayersOptionsList.OrderByDescending(x => ParseFloat(x.Score));
+        var cortedArr = data.PlayersOptionsList.OrderByDescending(x => ParseFloat(x.Score)).ToList();
+
+        foreach (PlayersOptions player in cortedArr)
+        {
+            var w = cortedArr.Where(x => x != player).ToList(); 
+            foreach (PlayersOptions playerW in w)
+            {
+                if(playerW.Name.Equals(player.Name)) {
+                    if(ParseFloat(playerW.Score) > ParseFloat(player.Score))
+                    {
+                        cortedArr = w;
+                    }
+                }
+            }
+        }
+
 
         foreach (var playerData in cortedArr)
         {
-            if (PlayerPrefs.GetString("Name").Length > 0 && PlayerPrefs.GetString("Name").Equals(playerData.Name))
+            if (string.IsNullOrEmpty(PlayerPrefs.GetString("Name")))
             {
                 _menu.SetActive(true);
-                _menu.GetComponent<RectTransform>().DOScale(Vector3.one, 2);
+                _menu.GetComponent<RectTransform>().DOMoveY(540, 1.5f);
             }
             else
             {
@@ -49,13 +64,16 @@ public class MainMenu : MonoBehaviour
             content.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerData.Name;
             content.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = playerData.Score;
         }
+
+        _gameCamera.SetActive(false);
+        _menuCamera.SetActive(true);
     }
     private float ParseFloat(string s)
     {
         float result = -1;
         if (!float.TryParse(s, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.GetCultureInfo("en-US"), out result))
         {
-            Debug.Log("Can't pars float,wrong text ");
+            //Debug.Log("Can't pars float,wrong text ");
         }
 
         return result;
@@ -66,10 +84,10 @@ public class MainMenu : MonoBehaviour
         if(string.IsNullOrEmpty(_nameField.text)) return;
         var Name = _nameField.text;
         PlayerPrefs.SetString("Name", Name);
-        _namePanel.GetComponent<RectTransform>().DOMoveY(1500, 1.5f).OnComplete(() =>
+        _namePanel.GetComponent<RectTransform>().DOMoveY(1800, 1.5f).OnComplete(() =>
         {
             _menu.SetActive(true);
-            _menu.GetComponent<RectTransform>().DOScale(Vector3.one, 1);
+            _menu.GetComponent<RectTransform>().DOMoveY(540, 1.5f);
         });
     }
 
