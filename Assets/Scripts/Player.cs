@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System;
 using UnityEngine;
 
@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public Action ChangedHP;
     public Action ChangedSpeed;
     public Action ChangedScore;
+
+    [SerializeField] private MainMenu _menu;
 
     private void Start()
     {
@@ -66,5 +68,11 @@ public class Player : MonoBehaviour
             ChangedScore();
             _score = value;
         }
+    }
+
+    [ContextMenu("Умереть")]
+    public void Death()
+    {
+        _menu.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
     }
 }
