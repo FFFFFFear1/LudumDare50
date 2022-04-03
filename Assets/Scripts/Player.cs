@@ -11,19 +11,25 @@ public class Player : MonoBehaviour
 
     private float _hp = 100;
     private float _speed;
+    private float _score;
+
+    private float _startPosY;
 
     public Action ChangedHP;
     public Action ChangedSpeed;
+    public Action ChangedScore;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _startPosY = transform.position.y;
         _camera = Camera.main;
     }
 
     private void Update()
     {
         Speed = _rigidbody.velocity.y;
+        Score = (_startPosY - transform.position.y);
     }
 
     private void OnMouseDrag()
@@ -49,6 +55,16 @@ public class Player : MonoBehaviour
         {
             ChangedSpeed();
             _speed = value; 
+        }
+    }
+
+    public float Score
+    {
+        get { return _score; }
+        set
+        {
+            ChangedScore();
+            _score = value;
         }
     }
 }

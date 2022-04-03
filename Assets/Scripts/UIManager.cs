@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI ScoreText;
     [SerializeField] private TextMeshProUGUI HPText;
     [SerializeField] private TextMeshProUGUI SpeedText;
     [SerializeField] private Player _player;
@@ -13,6 +14,7 @@ public class UIManager : MonoBehaviour
     {
         _player.ChangedHP += UpdateHP;
         _player.ChangedSpeed += UpdateSpeed;
+        _player.ChangedScore += UpdateScore;
     }
 
     private void UpdateHP()
@@ -23,5 +25,10 @@ public class UIManager : MonoBehaviour
     private void UpdateSpeed()
     {
         SpeedText.text = $"Speed: {(_player.Speed < 0 ? _player.Speed * -1 : 0).ToString("f0")} M/h";
+    }
+
+    private void UpdateScore()
+    {
+        ScoreText.text = $"Score: {_player.Score.ToString("f0")}";
     }
 }

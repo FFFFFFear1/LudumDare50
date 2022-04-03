@@ -26,7 +26,7 @@ public class InventoryUI : MonoBehaviour
             if(curPlatform.type.Equals(platformType))
             {
 
-                var sprite = Instantiate(curPlatform.gameObject, transform.parent);
+                var sprite = Instantiate(curPlatform.gameObject, new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0), Quaternion.identity, transform.parent);
                 return sprite.GetComponent<PlatfromUI>();
             }
         }
