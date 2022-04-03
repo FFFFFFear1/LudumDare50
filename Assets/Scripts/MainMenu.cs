@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private GameObject _namePanel;
     [SerializeField] private GameObject _menu;
+    [SerializeField] private Transform _panelScreenPosition;
 
     [SerializeField] private string BASE_URL = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSdD6rvpKp6R8_UiVX-jyGcT_oXVllL_ajBmnhFTcdLbBIWwwQ/formResponse";
 
@@ -54,7 +55,7 @@ public class MainMenu : MonoBehaviour
             if (string.IsNullOrEmpty(PlayerPrefs.GetString("Name")))
             {
                 _menu.SetActive(true);
-                _menu.GetComponent<RectTransform>().DOMoveY(540, 1.5f);
+                _menu.GetComponent<RectTransform>().DOMoveY(_panelScreenPosition.position.y, 1.5f);
             }
             else
             {
