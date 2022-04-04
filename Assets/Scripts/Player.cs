@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     private float _speed;
     private float _score;
     private bool _dead;
+    private float[] _speedBorders = new float[2]{ 5, 20 };
 
     private float _startPosY;
 
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
     public Action<float> OnObjectHit;
 
 
+
     [SerializeField] private MainMenu _menu;
 
     private void Start()
@@ -31,6 +34,7 @@ public class Player : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _startPosY = transform.position.y;
         _camera = Camera.main;
+        StartCoroutine(AddScore());
     }
 
     private void OnEnable()
@@ -45,7 +49,6 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Speed = _rigidbody.velocity.y;
-        Score = (_startPosY - transform.position.y);
     }
 
     private void OnMouseDown()
@@ -99,6 +102,20 @@ public class Player : MonoBehaviour
             _score = value;
         }
     }
+
+    public IEnumerator AddScore()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            Debug.Log(Speed);
+            if (-Speed >= _speedBorders[0] && -Speed <= _speedBorders[1])
+            {
+                Score++;
+            }
+        }
+    } 
 
     [ContextMenu("Умереть")]
     public void Death()
