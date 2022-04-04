@@ -5,6 +5,7 @@ public class WallsSpawner : MonoBehaviour
 {
     private const int WALL_LENGTH = 30;
 
+    [SerializeField] private GameObject _gameCam;
     [SerializeField] private WallView[] _wallViews;
     [SerializeField] private int _oneVariantWallAmount = 6;
     [SerializeField] private Transform _playerPosition;
@@ -25,6 +26,18 @@ public class WallsSpawner : MonoBehaviour
             for (int j = 0; j < _oneVariantWallAmount; j++)
             {
                 WallView wallVariant = Instantiate(_wallViews[i], transform);
+
+                if(_gameCam != null)
+                {
+                    for(int z = 0; z < wallVariant.transform.childCount; z++)
+                    {
+                        if(wallVariant.transform.GetChild(z).GetComponent<ParallaxForBackground>())
+                        {
+                            wallVariant.transform.GetChild(z).GetComponent<ParallaxForBackground>().cam = _gameCam;
+                        }
+                    }
+                }
+
                 wallVariant.transform.parent = transform;
                 if (_visibleWalls.Count < _shownWallsAmount)
                     _visibleWalls.Add(wallVariant);
