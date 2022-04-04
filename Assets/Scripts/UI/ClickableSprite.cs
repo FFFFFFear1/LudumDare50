@@ -22,6 +22,9 @@ public class ClickableSprite : MonoBehaviour
     {
         if(Input.GetKeyDown(keyCode))
         {
+            if(InventoryUI.instance._sprite != null)
+                Destroy(InventoryUI.instance._sprite.gameObject);
+            
             InventoryUI.instance._sprite = InventoryUI.instance.GetPlatfromSprite(type);
         }
     }
