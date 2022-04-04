@@ -110,7 +110,6 @@ public class Player : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
 
-            Debug.Log(Speed);
             if (-Speed >= _speedBorders[0] && -Speed <= _speedBorders[1])
             {
                 Score++;
