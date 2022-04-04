@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private const string WALL = "Wall";
     [SerializeField] private BodyPart[] bodyParts;
+    [SerializeField] private float jumpPower;
 
     private Rigidbody2D _rigidbody;
     private Camera _camera;
@@ -47,10 +48,11 @@ public class Player : MonoBehaviour
         Score = (_startPosY - transform.position.y);
     }
 
-   // private void OnMouseDrag()
-   // {
-   //     _rigidbody.DOMove(_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)), 0.125f);
-   // }
+    private void OnMouseDown()
+    {
+        //_rigidbody.DOMove(_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)), 0.125f);
+        _rigidbody.AddForce(Vector2.up * jumpPower);
+    }
 
     private void DamagePlayer(float hp)
     {
