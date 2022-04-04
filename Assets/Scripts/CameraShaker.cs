@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -9,6 +10,15 @@ public class CameraShaker : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _vCam;
     [SerializeField] private float _duration;
     [SerializeField] private float _intensity;
+
+    public static Action OnWallCollide;
+
+    private void OnEnable() => 
+        OnWallCollide += ShakeCamera;
+
+    private void OnDisable() => 
+        OnWallCollide += ShakeCamera;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
