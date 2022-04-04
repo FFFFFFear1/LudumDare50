@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7630663067539480365}
   - component: {fileID: 510221979}
   - component: {fileID: 1792373317}
+  - component: {fileID: 5194113440686124845}
   m_Layer: 7
   m_Name: RightHip
   m_TagString: Untagged
@@ -123,7 +124,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.5721123, y: -0.035575584}
-  m_ConnectedAnchor: {x: -0.007112311, y: -0.90257573}
+  m_ConnectedAnchor: {x: -0.0071123536, y: -0.90257573}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -182,6 +183,19 @@ PolygonCollider2D:
       - {x: 0.255, y: -0.11}
       - {x: 0.255, y: 0.14}
       - {x: 0.145, y: 0.32}
+--- !u!114 &5194113440686124845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630663067539480354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc6d59c3a31334b9290858cadf9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stoneCrashEffect: {fileID: 7099302602862682897, guid: ebb84a22657fb1c4b92e922d69ed317c, type: 3}
 --- !u!1 &7630663067551889603
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +210,7 @@ GameObject:
   - component: {fileID: 7630663067551889614}
   - component: {fileID: 487864693}
   - component: {fileID: 600416872}
+  - component: {fileID: 7911669763704932343}
   m_Layer: 7
   m_Name: RightShoulder
   m_TagString: Untagged
@@ -305,7 +320,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.65116704, y: -0.11373273}
-  m_ConnectedAnchor: {x: 0.11716706, y: 0.22826722}
+  m_ConnectedAnchor: {x: 0.11716711, y: 0.22826736}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -366,6 +381,19 @@ PolygonCollider2D:
       - {x: 0.074999996, y: -0.295}
       - {x: 0.085, y: -0.185}
       - {x: 0.24499999, y: 0.105}
+--- !u!114 &7911669763704932343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630663067551889603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc6d59c3a31334b9290858cadf9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stoneCrashEffect: {fileID: 7099302602862682897, guid: ebb84a22657fb1c4b92e922d69ed317c, type: 3}
 --- !u!1 &7630663067743302255
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +408,7 @@ GameObject:
   - component: {fileID: 7630663067743302250}
   - component: {fileID: 176387038}
   - component: {fileID: 921604711}
+  - component: {fileID: 8214244604858459769}
   m_Layer: 7
   m_Name: LeftHip
   m_TagString: Untagged
@@ -489,7 +518,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.58832854, y: -0.035911463}
-  m_ConnectedAnchor: {x: 0.12332857, y: -0.9019113}
+  m_ConnectedAnchor: {x: 0.12332855, y: -0.9019116}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -548,6 +577,19 @@ PolygonCollider2D:
       - {x: 0.07, y: -0.22999999}
       - {x: 0.17999999, y: -0.049999997}
       - {x: 0.17999999, y: 0.22999999}
+--- !u!114 &8214244604858459769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630663067743302255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc6d59c3a31334b9290858cadf9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stoneCrashEffect: {fileID: 7099302602862682897, guid: ebb84a22657fb1c4b92e922d69ed317c, type: 3}
 --- !u!1 &7630663068446884426
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +604,7 @@ GameObject:
   - component: {fileID: 7630663068446885301}
   - component: {fileID: 544424958}
   - component: {fileID: 1993582043}
+  - component: {fileID: 6127750389254692787}
   m_Layer: 7
   m_Name: 'LeftShoulder '
   m_TagString: Untagged
@@ -671,7 +714,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.6058212, y: -0.025668025}
-  m_ConnectedAnchor: {x: -0.13182119, y: 0.37033215}
+  m_ConnectedAnchor: {x: -0.13182117, y: 0.37033224}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -730,6 +773,19 @@ PolygonCollider2D:
       - {x: 0.255, y: -0.345}
       - {x: 0.255, y: -0.195}
       - {x: 0.125, y: 0.105}
+--- !u!114 &6127750389254692787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630663068446884426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc6d59c3a31334b9290858cadf9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stoneCrashEffect: {fileID: 7099302602862682897, guid: ebb84a22657fb1c4b92e922d69ed317c, type: 3}
 --- !u!1 &7630663068683688170
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +942,7 @@ MonoBehaviour:
   - {fileID: 510221979}
   - {fileID: 0}
   - {fileID: 0}
+  jumpPower: 0
   _menu: {fileID: 0}
 --- !u!114 &1386092894
 MonoBehaviour:
@@ -915,6 +972,7 @@ GameObject:
   - component: {fileID: 7630663069027214964}
   - component: {fileID: 7630663069027214962}
   - component: {fileID: 1157916609}
+  - component: {fileID: 4772974113914470621}
   m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
@@ -1040,7 +1098,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.011705368, y: -0.5423491}
-  m_ConnectedAnchor: {x: -0.05029464, y: 0.7486507}
+  m_ConnectedAnchor: {x: -0.050294638, y: 0.7486509}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1063,3 +1121,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScale: 0.8
   _player: {fileID: 7630663068683688149}
+--- !u!114 &4772974113914470621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630663069027214967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc6d59c3a31334b9290858cadf9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stoneCrashEffect: {fileID: 7099302602862682897, guid: ebb84a22657fb1c4b92e922d69ed317c, type: 3}
