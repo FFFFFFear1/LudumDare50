@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
 
     private void UpdateHP(float hp)
     {
-        HPText.text = $"HP: {hp}%";
+        HPText.text = $"HP: {hp.ToString("f0")}%";
     }
 
     private void UpdateSpeed()

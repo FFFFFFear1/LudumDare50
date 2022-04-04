@@ -23,6 +23,7 @@ public class FinalScreen : MonoBehaviour
         {
             scoreText.text = "Score: " + player.Score;
             panel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
