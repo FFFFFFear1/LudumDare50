@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     private float _speed;
     private float _score;
     private bool _dead;
+    private float[] _speedBorders = new float[2]{ 5, 15 };
 
     private float _startPosY;
 
@@ -24,13 +26,15 @@ public class Player : MonoBehaviour
     public Action<float> OnObjectHit;
 
 
-    [SerializeField] private GamePlayUI _gameplayUI;
+
+    [SerializeField] private MainMenu _menu;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _startPosY = transform.position.y;
         _camera = Camera.main;
+        StartCoroutine(AddScore());
     }
 
     private void OnEnable()
@@ -45,7 +49,6 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Speed = _rigidbody.velocity.y;
-        Score = (_startPosY - transform.position.y);
     }
 
     private void OnMouseDown()
@@ -72,8 +75,7 @@ public class Player : MonoBehaviour
             {
                 _hp = value > 100 ? 100 : 0;
                 _dead = _hp == 0;
-                //Death();
-                if (_dead)
+                if(_dead)
                     ChangedHP?.Invoke(_hp);
             }
             if(!_dead)
@@ -101,10 +103,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    public IEnumerator AddScore()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            Debug.Log(Speed);
+            if (-Speed >= _speedBorders[0] && -Speed <= _speedBorders[1])
+            {
+                Score++;
+            }
+        }
+    } 
+
     [ContextMenu("Умереть")]
     public void Death()
     {
-        _gameplayUI.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
+        _menu.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
     }
 
 }
