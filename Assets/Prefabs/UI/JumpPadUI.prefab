@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5499492359977741213}
   - component: {fileID: 2883758848529297711}
   m_Layer: 5
-  m_Name: PillowUI
+  m_Name: JumpPadUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 138.936, y: 105.6197}
+  m_SizeDelta: {x: 518, y: 277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5499492359977741212
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7658906257546325301, guid: ef6a0e1f28ee8d34685a0b0735ff12eb, type: 3}
+  m_Sprite: {fileID: -8844032134274880453, guid: 50eb6b5523ee7ed48940a7534991148b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,4 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9795569e5bb414faec6d7c8217be0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 5
