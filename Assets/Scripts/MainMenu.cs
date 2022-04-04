@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-       // _loader.OnProcessData += LoadLeaderBoard;
+        _loader.OnProcessData += LoadLeaderBoard;
     }
 
     private void LoadLeaderBoard(PlayersData data)
@@ -105,7 +105,7 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(Post(Name, Score, Application.systemLanguage.ToString()));
     }
-
+   
     private IEnumerator Post(string name, string score, string country)
     {
         WWWForm form = new WWWForm();
