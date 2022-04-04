@@ -19,12 +19,6 @@ public class CameraShaker : MonoBehaviour
     private void OnDisable() => 
         OnWallCollide += ShakeCamera;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-            ShakeCamera();
-    }
-
     private void ShakeCamera()
     {
         float currIntensity = 0;

@@ -1703,6 +1703,7 @@ Transform:
   - {fileID: 4293936861343100335}
   - {fileID: 7224704664072140143}
   - {fileID: 237598669878053427}
+  - {fileID: 8635848499897457410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3980,3 +3981,73 @@ PolygonCollider2D:
       - {x: -0.43214285, y: -0.6192857}
       - {x: -0.4192857, y: -0.61214286}
       - {x: -0.405, y: -0.6092857}
+--- !u!1001 &8292315943820208883
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3090988946030268001}
+    m_Modifications:
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115762, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115762, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: -0.61086524
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115764, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: m_Name
+      value: BloodFlow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+--- !u!4 &8635848499897457410 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+  m_PrefabInstance: {fileID: 8292315943820208883}
+  m_PrefabAsset: {fileID: 0}
