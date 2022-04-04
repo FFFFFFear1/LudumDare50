@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -15,6 +16,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _namePanel;
     [SerializeField] private GameObject _soundPanel;
     [SerializeField] private GameObject _leaderboard;
+    [SerializeField] private AudioMixer mixer;
 
     [SerializeField] private GoogleSheetLoader _loader;
 
@@ -99,5 +101,10 @@ public class MainMenu : MonoBehaviour
     public void SwitchSoundPanel()
     {
         _soundPanel.SetActive(!_soundPanel.activeSelf);
+    }
+
+    public void SwitchSound(bool active)
+    {
+        mixer.SetFloat("Master", active?0: -80);
     }
 }
