@@ -18,7 +18,6 @@ public class PlatfromUI : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             InventoryUI.instance.GetPlatfrom(type, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)), InventoryUI.instance._sprite.GetAngle);
-            Destroy(gameObject);
             Destroy(InventoryUI.instance._sprite.gameObject);
         }
         if (Input.GetMouseButton(1))
