@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D[] rigs;
+    private const string WALL = "Wall";
+    [SerializeField] private BodyPart[] bodyParts;
 
     private Rigidbody2D _rigidbody;
     private Camera _camera;
@@ -12,12 +13,15 @@ public class Player : MonoBehaviour
     private float _hp = 100;
     private float _speed;
     private float _score;
+    private bool _touching;
 
     private float _startPosY;
 
     public Action ChangedHP;
     public Action ChangedSpeed;
     public Action ChangedScore;
+    public Action<float> OnObjectHit;
+
 
     [SerializeField] private MainMenu _menu;
 
@@ -28,17 +32,30 @@ public class Player : MonoBehaviour
         _camera = Camera.main;
     }
 
+    private void OnEnable()
+    {
+        OnObjectHit += DamagePlayer;
+    }
+    private void OnDisable()
+    {
+        OnObjectHit -= DamagePlayer;
+    }
+
     private void Update()
     {
         Speed = _rigidbody.velocity.y;
         Score = (_startPosY - transform.position.y);
     }
 
-    private void OnMouseDrag()
-    {
-        _rigidbody.DOMove(_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)), 0.125f);
-    }
+   // private void OnMouseDrag()
+   // {
+   //     _rigidbody.DOMove(_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)), 0.125f);
+   // }
 
+    private void DamagePlayer(float hp)
+    {
+        HP -= hp;
+    }
 
     public float HP
     {
@@ -46,7 +63,7 @@ public class Player : MonoBehaviour
         set 
         {
             ChangedHP();
-            _hp = value; 
+            _hp = value >= 0 ? value : 0;
         }
     }
 
@@ -75,4 +92,5 @@ public class Player : MonoBehaviour
     {
         _menu.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
     }
+
 }

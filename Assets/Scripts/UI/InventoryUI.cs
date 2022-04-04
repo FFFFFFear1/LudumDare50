@@ -48,7 +48,11 @@ public class InventoryUI : MonoBehaviour
 }
 
 public enum PlatformType { 
-    small,
-    middle,
-    big
+    plank_small,
+    plank_middle,
+    plank_big,
+    pillow,
+    anvil,
+    jumppad,
+    ball
 }

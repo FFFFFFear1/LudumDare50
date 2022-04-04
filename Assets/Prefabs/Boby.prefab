@@ -139,7 +139,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.484294, y: -0.349425}
-  m_ConnectedAnchor: {x: 0.5033259, y: 0.18849029}
+  m_ConnectedAnchor: {x: 0.5033268, y: 0.18849023}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.2
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663067522081902
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +302,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.56499594, y: -0.031013964}
-  m_ConnectedAnchor: {x: 0.50893027, y: -0.030454364}
+  m_ConnectedAnchor: {x: 0.50892943, y: -0.030454136}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -321,6 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.7
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663067539480354
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.7
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663067551889603
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.9
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663067743302255
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +791,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.58832854, y: -0.035911463}
-  m_ConnectedAnchor: {x: -0.24174975, y: -0.44861686}
+  m_ConnectedAnchor: {x: -0.24174975, y: -0.44861722}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -804,6 +812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.7
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663067942335471
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.2
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663068390565729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.2
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663068446884426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,6 +1299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.9
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663068670547981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.9
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663068683688170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,26 +1600,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7630663068683688170}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b495b3c6c8609f34e9777a159dbbdea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigs:
-  - {fileID: 7630663068683688151}
-  - {fileID: 7630663069027214963}
-  - {fileID: 7630663068446885303}
-  - {fileID: 7630663069230677865}
-  - {fileID: 7630663067942335468}
-  - {fileID: 7630663067551889600}
-  - {fileID: 7630663068670547977}
-  - {fileID: 7630663068390565742}
-  - {fileID: 7630663067743302252}
-  - {fileID: 7630663069203241651}
-  - {fileID: 7630663068775016908}
-  - {fileID: 7630663067539480367}
-  - {fileID: 7630663067522081898}
-  - {fileID: 7630663067502461281}
+  bodyParts:
+  - {fileID: 1386092894}
+  - {fileID: 1157916609}
+  - {fileID: 544424958}
+  - {fileID: 1898249952}
+  - {fileID: 107901529}
+  - {fileID: 487864693}
+  - {fileID: 1405589952}
+  - {fileID: 588768983}
+  - {fileID: 176387038}
+  - {fileID: 1938184966}
+  - {fileID: 1410181241}
+  - {fileID: 510221979}
+  - {fileID: 525592031}
+  - {fileID: 405143764}
+  _menu: {fileID: 0}
 --- !u!114 &1386092894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,6 +1633,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 1.2
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663068775016911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1774,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.44815153, y: -0.37956482}
-  m_ConnectedAnchor: {x: -0.46428734, y: 0.25304228}
+  m_ConnectedAnchor: {x: -0.46428734, y: 0.2530424}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1774,6 +1795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.2
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663069027214967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,7 +1936,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.011705368, y: -0.5423491}
-  m_ConnectedAnchor: {x: 0.0066921804, y: 0.5079281}
+  m_ConnectedAnchor: {x: 0.006692203, y: 0.50792843}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1934,6 +1957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.8
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663069203241655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +2099,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.5725684, y: -0.016805237}
-  m_ConnectedAnchor: {x: -0.5089601, y: -0.0021618844}
+  m_ConnectedAnchor: {x: -0.50896007, y: -0.0021619818}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2095,6 +2120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.7
+  _player: {fileID: 7630663068683688149}
 --- !u!1 &7630663069230677869
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,3 +2283,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81904c1a012eb7a42ad52032c9ef5e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxScale: 0.9
+  _player: {fileID: 7630663068683688149}
