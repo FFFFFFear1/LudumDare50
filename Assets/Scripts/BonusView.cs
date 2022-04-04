@@ -5,7 +5,8 @@ public class BonusView : MonoBehaviour
 {
     [SerializeField] private BonusType bonus;
     private Dictionary<BonusType, ABonus> bonuses;
-    private int appearChance = 20;
+    [SerializeField] private int appearChance = 20;
+    [SerializeField] private int power = 20;
     public int AppearChance { get => appearChance;}
 
     private void Awake()
@@ -21,22 +22,20 @@ public class BonusView : MonoBehaviour
     {
         if (collision.transform.GetComponent<Player>())
         {
-            bonuses[bonus].UseBounus(collision.transform.GetComponent<Player>());
+            bonuses[bonus].UseBounus(collision.transform.GetComponent<Player>(),power);
         }
     }
 }
 public class HealBonus : ABonus
 {
-    private int _healPower=20;
-
     public HealBonus(GameObject bonus) : base(bonus)
     {
     }
 
-    public override void UseBounus(Player player)
+    public override void UseBounus(Player player, float power)
     {
-        base.UseBounus(player);
-        player.HP += _healPower;
+        base.UseBounus(player,power);
+        player.HP += power;
     }
 }
 public abstract class ABonus
@@ -48,7 +47,7 @@ public abstract class ABonus
         _bonus = bonus;
     }
 
-    public virtual void UseBounus(Player player)
+    public virtual void UseBounus(Player player, float power)
     {
         _bonus.SetActive(false);
     }
