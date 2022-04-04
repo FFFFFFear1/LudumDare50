@@ -13,7 +13,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Transform _contentPlayers;
 
     [SerializeField] private GameObject _namePanel;
-    [SerializeField] private GameObject _menu;
+    [SerializeField] private GameObject _soundPanel;
+    [SerializeField] private GameObject _leaderboard;
 
     [SerializeField] private GoogleSheetLoader _loader;
 
@@ -49,7 +50,7 @@ public class MainMenu : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(PlayerPrefs.GetString("Name")))
             {
-                _menu.SetActive(true);
+                //_menu.SetActive(true);
                 _namePanel.SetActive(false);
                 //_menu.GetComponent<RectTransform>().DOMoveY(_panelScreenPosition.position.y, 1.5f);
             }
@@ -79,9 +80,9 @@ public class MainMenu : MonoBehaviour
         if(string.IsNullOrEmpty(_nameField.text)) return;
         var Name = _nameField.text;
         PlayerPrefs.SetString("Name", Name);
-        _namePanel.GetComponent<RectTransform>().DOMoveY(1800, 1.5f).OnComplete(() =>
+        _namePanel.GetComponent<RectTransform>().DOMoveY(3000, 1.5f).OnComplete(() =>
         {
-            _menu.SetActive(true);
+            //_menu.SetActive(true);
            // _menu.GetComponent<RectTransform>().DOMoveY(540, 1.5f);
         });
     }
@@ -89,5 +90,14 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void SwitchLeaderboard()
+    {
+        _leaderboard.SetActive(!_leaderboard.activeSelf);
+    }
+    public void SwitchSoundPanel()
+    {
+        _soundPanel.SetActive(!_soundPanel.activeSelf);
     }
 }
