@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
 
 
-    [SerializeField] private MainMenu _menu;
+    [SerializeField] private GamePlayUI _gamePlayUI;
 
     private void Start()
     {
@@ -75,7 +75,8 @@ public class Player : MonoBehaviour
             {
                 _hp = value > 100 ? 100 : 0;
                 _dead = _hp == 0;
-                if(_dead)
+                //Death();
+                if (_dead)
                     ChangedHP?.Invoke(_hp);
             }
             if(!_dead)
@@ -120,7 +121,7 @@ public class Player : MonoBehaviour
     [ContextMenu("Умереть")]
     public void Death()
     {
-        _menu.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
+        _gamePlayUI.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
     }
 
 }
