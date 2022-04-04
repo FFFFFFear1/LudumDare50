@@ -237,11 +237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.32
+      value: -7.49
       objectReference: {fileID: 0}
     - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.28
+      value: -3.37
       objectReference: {fileID: 0}
     - target: {fileID: 345804233151115761, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
       propertyPath: m_LocalPosition.z
@@ -276,6 +276,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 345804233151115762, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115762, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
       propertyPath: ShapeModule.m_Rotation.x
       value: -19.83
       objectReference: {fileID: 0}
@@ -286,6 +290,10 @@ PrefabInstance:
     - target: {fileID: 345804233151115762, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 345804233151115762, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 345804233151115764, guid: e99c1097ae715f741b201af7e5baf105, type: 3}
       propertyPath: m_Name
