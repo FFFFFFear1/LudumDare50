@@ -10443,8 +10443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vCam: {fileID: 1903135991}
-  _duration: 2
-  _intensity: 0.5
+  _duration: 0.3
+  _intensity: 1
 --- !u!1 &1917780970
 GameObject:
   m_ObjectHideFlags: 0
