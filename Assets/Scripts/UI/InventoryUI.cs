@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     [Header("Game objects")]
     [SerializeField] private List<Platform> _platforms;
 
+    public PlatfromUI _sprite;
     public static InventoryUI instance;
 
     private void Awake()
