@@ -13,11 +13,11 @@ public class Player : MonoBehaviour
     private float _hp = 100;
     private float _speed;
     private float _score;
-    private bool _touching;
+    private bool _dead;
 
     private float _startPosY;
 
-    public Action ChangedHP;
+    public Action<float> ChangedHP;
     public Action ChangedSpeed;
     public Action ChangedScore;
     public Action<float> OnObjectHit;
@@ -67,9 +67,14 @@ public class Player : MonoBehaviour
                 _hp = value;
             }
             else
-                _hp = value > 100?100:0;
-            ChangedHP();
-
+            {
+                _hp = value > 100 ? 100 : 0;
+                _dead = _hp == 0;
+                if(_dead)
+                    ChangedHP?.Invoke(_hp);
+            }
+            if(!_dead)
+                ChangedHP?.Invoke(_hp);
         }
     }
 

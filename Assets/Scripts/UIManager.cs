@@ -17,9 +17,9 @@ public class UIManager : MonoBehaviour
         _player.ChangedScore += UpdateScore;
     }
 
-    private void UpdateHP()
+    private void UpdateHP(float hp)
     {
-        HPText.text = $"HP: {_player.HP}%";
+        HPText.text = $"HP: {hp}%";
     }
 
     private void UpdateSpeed()

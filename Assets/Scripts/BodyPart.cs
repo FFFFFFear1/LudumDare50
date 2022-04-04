@@ -8,8 +8,10 @@ public class BodyPart : MonoBehaviour
 {
     private const int WALL_LAYER = 6;
     private const int PLANK_LAYER = 8;
+    private const int PILLOW_LAYER = 9;
     private const int WALL_HIT_DAMAGE = 6;
     private const int PLANK_HIT_DAMAGE = 1;
+    private const float PILLOW_HIT_DAMAGE = 0.1f;
     private const int HIT_COOLDOWN = 3;
     [SerializeField] private float _maxScale;
     [SerializeField] private Player _player;
@@ -23,6 +25,7 @@ public class BodyPart : MonoBehaviour
     {
         { WALL_LAYER, WALL_HIT_DAMAGE },
         { PLANK_LAYER, PLANK_HIT_DAMAGE },
+        { PILLOW_LAYER, PILLOW_HIT_DAMAGE },
     };
 
 
