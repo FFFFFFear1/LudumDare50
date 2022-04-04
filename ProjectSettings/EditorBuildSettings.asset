@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: d28430b01bf8b5544b783905828dcf85
   - enabled: 1
+    path: Assets/Scenes/Tutor.unity
+    guid: 2c7f9f45018e7b24f86f31bcc0d79147
+  - enabled: 1
     path: Assets/Scenes/Falling.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
