@@ -58,7 +58,7 @@ public class BodyPart : MonoBehaviour
     private void Hit(float dmgVariant)
     {
         StartCoroutine(HitCooldown());
-        ChangeScale();
+        //ChangeScale();
         float dmg = dmgVariant * (Math.Abs(_player.Speed) / 10);
         _player.OnObjectHit?.Invoke(dmg);
     }

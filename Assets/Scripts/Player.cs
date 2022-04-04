@@ -60,10 +60,16 @@ public class Player : MonoBehaviour
     public float HP
     {
         get { return _hp; }
-        set 
+        set
         {
+            if (value < 100 && value > 0)
+            {
+                _hp = value;
+            }
+            else
+                _hp = value > 100?100:0;
             ChangedHP();
-            _hp = value >= 0 ? value : 0;
+
         }
     }
 
