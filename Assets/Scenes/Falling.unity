@@ -10959,6 +10959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903135992}
   - component: {fileID: 1903135991}
+  - component: {fileID: 1903135993}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: MainCamera
@@ -11019,6 +11020,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903135993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903135990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6004d225f05ec545af7a431f59fbac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vCam: {fileID: 1903135991}
+  _duration: 2
+  _intensity: 0.5
 --- !u!1 &1917780970
 GameObject:
   m_ObjectHideFlags: 0
