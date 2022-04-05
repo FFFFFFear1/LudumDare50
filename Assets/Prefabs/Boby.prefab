@@ -893,7 +893,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.07145416, y: 0.23688313}
-  m_ConnectedAnchor: {x: -0.05240495, y: -0.14922185}
+  m_ConnectedAnchor: {x: -0.052405003, y: -0.14922202}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1471,7 +1471,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.005963459, y: 0.18918158}
-  m_ConnectedAnchor: {x: -0.36766255, y: -0.6779949}
+  m_ConnectedAnchor: {x: -0.36766255, y: -0.6779946}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   jumpPower: 0
-  _menu: {fileID: 0}
+  _gamePlayUI: {fileID: 0}
 --- !u!114 &1386092894
 MonoBehaviour:
   m_ObjectHideFlags: 0
