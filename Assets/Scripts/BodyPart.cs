@@ -14,7 +14,7 @@ public class BodyPart : MonoBehaviour
     private const int BALL_LAYER = 13;
 
 
-    private const float WALL_HIT_DAMAGE = 2.5f;
+    private const float WALL_HIT_DAMAGE = 5f;
     private const float PLANK_HIT_DAMAGE = 0.5f;
     private const float ANVIL_HIT_DAMAGE = 1.5f;
     private const float JUMPPAD_HIT_DAMAGE = 2f;
