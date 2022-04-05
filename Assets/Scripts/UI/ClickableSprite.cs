@@ -8,9 +8,11 @@ public class ClickableSprite : MonoBehaviour
 {
     [SerializeField] private KeyCode keyCode;
     [SerializeField] private PlatformType type;
+    [SerializeField] private float cooldown;
+    [SerializeField] private Image imageCooldonw;
     
     private Button _button;
-    private bool _canSpawn;
+    private bool _canSpawn=true;
 
     private void Awake()
     {
@@ -20,15 +22,30 @@ public class ClickableSprite : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(keyCode))
+        if(Input.GetKeyDown(keyCode) && _canSpawn)
         {
             if(InventoryUI.instance._sprite != null)
                 Destroy(InventoryUI.instance._sprite.gameObject);
             
             InventoryUI.instance._sprite = InventoryUI.instance.GetPlatfromSprite(type);
+            StartCoroutine(StartPlatformBreak());
         }
     }
-
+    private IEnumerator StartPlatformBreak()
+    {
+        imageCooldonw.fillAmount = 1;
+        float timer = cooldown;
+        float seconds = cooldown / 60;
+        _canSpawn = false;
+        while (timer >= 0)
+        {
+            imageCooldonw.fillAmount = timer / cooldown;
+            //_timerText.text = (int)timer + 1 + "";
+            timer -= seconds;
+            yield return new WaitForSeconds(seconds);
+        }
+        _canSpawn = true;
+    }
     private void initButtons()
     {
         //EventTrigger downEventTrigger = _button.gameObject.AddComponent<EventTrigger>();
