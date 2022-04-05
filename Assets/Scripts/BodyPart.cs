@@ -12,13 +12,16 @@ public class BodyPart : MonoBehaviour
     private const int ANVIL_LAYER = 10;
     private const int JUMPPAD_LAYER = 12;
     private const int BALL_LAYER = 13;
-    private const int WALL_HIT_DAMAGE = 6;
-    private const int PLANK_HIT_DAMAGE = 1;
-    private const int ANVIL_HIT_DAMAGE = 3;
-    private const int JUMPPAD_HIT_DAMAGE = 2;
+
+
+    private const float WALL_HIT_DAMAGE = 6;
+    private const float PLANK_HIT_DAMAGE = 1;
+    private const float ANVIL_HIT_DAMAGE = 3;
+    private const float JUMPPAD_HIT_DAMAGE = 2;
     private const float BALL_HIT_DAMAGE = 0.5f;
     private const float PILLOW_HIT_DAMAGE = 0.1f;
-    private const int HIT_COOLDOWN = 3;
+    private const float HIT_COOLDOWN = 3;
+
     [SerializeField] private float _maxScale;
     [SerializeField] private Player _player;
 
@@ -44,19 +47,13 @@ public class BodyPart : MonoBehaviour
         _startScale = transform.localScale.x;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer.Equals(WALL_LAYER))
-        {
-           
-
-        }
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (_canTouch)
         {
-            if (collision.gameObject.layer.Equals(WALL_LAYER)||
+            if (collision.gameObject.layer.Equals(WALL_LAYER) || 
+                collision.gameObject.layer.Equals(ANVIL_LAYER) ||
+                collision.gameObject.layer.Equals(PILLOW_LAYER) ||
                 collision.gameObject.layer.Equals(PLANK_LAYER))
             {
                 Hit(_damageByLayer[collision.gameObject.layer]);

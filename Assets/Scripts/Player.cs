@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         get { return _hp; }
         set
         {
-            if (value < 100 && value > 0)
+            if (value > 0)
             {
                 _hp = value;
             }
