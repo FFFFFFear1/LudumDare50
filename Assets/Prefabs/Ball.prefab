@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  _lifeTime: 6
+  _lifeTime: 4
   _timerImage: {fileID: 7041796422782305956}
   _timerText: {fileID: 4065564566207743364}
 --- !u!58 &3988070166325475612

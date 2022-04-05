@@ -14,12 +14,12 @@ public class BodyPart : MonoBehaviour
     private const int BALL_LAYER = 13;
 
 
-    private const float WALL_HIT_DAMAGE = 6;
-    private const float PLANK_HIT_DAMAGE = 1;
-    private const float ANVIL_HIT_DAMAGE = 3;
-    private const float JUMPPAD_HIT_DAMAGE = 2;
+    private const float WALL_HIT_DAMAGE = 2.5f;
+    private const float PLANK_HIT_DAMAGE = 0.5f;
+    private const float ANVIL_HIT_DAMAGE = 1.5f;
+    private const float JUMPPAD_HIT_DAMAGE = 2f;
     private const float BALL_HIT_DAMAGE = 0.5f;
-    private const float PILLOW_HIT_DAMAGE = 0.1f;
+    private const float PILLOW_HIT_DAMAGE = 0.2f;
     private const float HIT_COOLDOWN = 3;
 
     [SerializeField] private float _maxScale;

@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  _lifeTime: 5
+  _lifeTime: 3
   _timerImage: {fileID: 0}
   _timerText: {fileID: 0}
