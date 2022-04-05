@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
             {
                 _hp = value > 100 ? 100 : 0;
                 _dead = _hp == 0;
-                //Death();
+                Death();
                 if (_dead)
                     ChangedHP?.Invoke(_hp);
             }
