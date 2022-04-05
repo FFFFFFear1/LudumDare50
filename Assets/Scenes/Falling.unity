@@ -4316,7 +4316,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -4402,7 +4402,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -4809,7 +4809,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -6835,7 +6835,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -8846,7 +8846,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -9470,7 +9470,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -13490,7 +13490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802245009056506158, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8802245009056506158, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: imageCooldonw
@@ -13698,7 +13698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802245010371752999, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8802245010371752999, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: imageCooldonw
@@ -13726,7 +13726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802245010567834651, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8802245010567834651, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: imageCooldonw
@@ -13758,7 +13758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802245010679459289, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: cooldown
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8802245010679459289, guid: 55471734c604ae54685dcf3e303c96c1, type: 3}
       propertyPath: imageCooldonw

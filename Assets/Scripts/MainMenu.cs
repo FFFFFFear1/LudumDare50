@@ -48,7 +48,7 @@ public class MainMenu : MonoBehaviour
             }
         }
 
-
+        int id = 1;
         foreach (var playerData in cortedArr)
         {
             if (!string.IsNullOrEmpty(PlayerPrefs.GetString("Name")))
@@ -67,6 +67,8 @@ public class MainMenu : MonoBehaviour
                 var content = Instantiate(_playerDataObject, _contentPlayers);
                 content.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerData.Name;
                 content.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = playerData.Score;
+                content.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = id.ToString();
+                id++;
             }
         }
 
