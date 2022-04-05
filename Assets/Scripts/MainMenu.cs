@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
 
 
     [SerializeField] private bool _loadTable;
+    private List<string> _playerNames = new List<string>();
 
     private void Awake()
     {
@@ -60,9 +61,13 @@ public class MainMenu : MonoBehaviour
             {
                 _namePanel.SetActive(true);
             }
-            var content = Instantiate(_playerDataObject, _contentPlayers);
-            content.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerData.Name;
-            content.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = playerData.Score;
+            if (!_playerNames.Contains(playerData.Name) && playerData.Name!="")
+            {
+                _playerNames.Add(playerData.Name);
+                var content = Instantiate(_playerDataObject, _contentPlayers);
+                content.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = playerData.Name;
+                content.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = playerData.Score;
+            }
         }
 
     }

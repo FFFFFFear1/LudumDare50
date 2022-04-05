@@ -121,6 +121,7 @@ public class Player : MonoBehaviour
     public void Death()
     {
         _gamePlayUI.PostData(PlayerPrefs.GetString("Name"), Score.ToString("f0"));
+        Debug.Log("Post");
     }
 
 }

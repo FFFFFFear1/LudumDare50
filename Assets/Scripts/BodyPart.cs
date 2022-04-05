@@ -24,6 +24,7 @@ public class BodyPart : MonoBehaviour
 
     [SerializeField] private float _maxScale;
     [SerializeField] private Player _player;
+    [SerializeField] private AudioSource _audio;
 
     private bool _stopScale;
     private float _startScale;
@@ -69,7 +70,8 @@ public class BodyPart : MonoBehaviour
         StartCoroutine(HitCooldown());
         //ChangeScale();
         float dmg = dmgVariant * (Math.Abs(_player.Speed) / 10);
-        _player.OnObjectHit?.Invoke(dmg);
+        _player.OnObjectHit?.Invoke(dmg>50?50:dmg);
+        _audio.Play();
     }
     private void ChangeScale()
     {
