@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private float _speed;
     private float _score;
     private bool _dead;
-    private float[] _speedBorders = new float[2]{ 5, 15 };
+    private float[] _speedBorders = new float[2]{ 5, 50 };
 
     private float _startPosY;
 
